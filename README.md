@@ -197,5 +197,4 @@ application.secret_key = 'supersecretkey'
 16. If it doesn't work go inside /var/www/catalog/catalog `sudo a2ensite catalog` and then try `sudo service apache2 restart`.
  
 ## 500 Internal Server Error
-# 500 Internal Server Error
-
+-After doing all these steps I still get an error.  I have tried this with the for a week and we still haven't reached a way to get this to show.  the default apache2 works find it is just the app that isn't working.  I have found the error by here sudo `nano /var/log/apache2/error.log`  however there has been no way to solve the psycopg2 error
