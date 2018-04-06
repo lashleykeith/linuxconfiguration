@@ -33,6 +33,7 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 8.  Click 'Download' to download your private key, it should go to your Download folder or your Document folder by default.  It is a .pem file
 ![6m](https://user-images.githubusercontent.com/21030885/38419959-3f5f581c-39dd-11e8-978d-e9cd738ba0c0.jpg)
 
+9. Click the 'Networking' tab and find the 'Add another' at the bottom. Add port 123 and 2200. Amazon Lightsail allows only port 22 and 80 by default, no matter how you set it up in ubuntu's ufw
 ![7m](https://user-images.githubusercontent.com/21030885/38419975-45795784-39dd-11e8-947b-9241cc389ef6.jpg)
   - From terminal on local machine
     - Rename download file `<filename>.pem` with `mv <filename>.pem mightymax.pem`
