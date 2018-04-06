@@ -20,7 +20,10 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 
 ![2m](https://user-images.githubusercontent.com/21030885/38419774-9d50cfce-39dc-11e8-8bc4-e473782db92b.jpg)
 
+5.  Scroll to 'Name your instance' and click 'Create'
 ![3m](https://user-images.githubusercontent.com/21030885/38419792-b267820e-39dc-11e8-8356-b788fe99c1ff.jpg)
+
+6.  The instance needs a minute of two to start loading.  When it is reading you will see 'running' in the left corner of the status card.  Write down the public IP address on a paper for further use.
 
 ![4m](https://user-images.githubusercontent.com/21030885/38419919-23427628-39dd-11e8-82c4-e6bf635ef801.jpg)
 
