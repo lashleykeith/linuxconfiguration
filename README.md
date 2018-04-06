@@ -73,13 +73,13 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 
 23. Type `logout` to disconnect from Amazon Lightsail server
 
-24. Log into the server as grader: `$ ssh -i ~/.ssh/udacity_key.rsa grader@13.58.225.150`
+24. Log into the server as grader: `$ ssh -i ~/.ssh/udacitykey.rsa grader@13.58.225.150`
 
 25. We now need to enforce the key-based authentication: `$ sudo nano /etc/ssh/sshd_config`. Find the *PasswordAuthentication* line and change text after to `no`. After this, restart ssh again: `$ sudo service ssh restart`
 
 26. We now need to change the ssh port from 22 to 2200, as required by Udacity: `$ sudo nano /etc/ssh/ssdh_config` Find the *Port* line and change `22` to `2200`. Restart ssh: `$ sudo service ssh restart`
 
-27. Disconnect the server by `$ ~.` and then log back through port 2200: `$ ssh -i ~/.ssh/udacity_key.rsa -p 2200 grader@13.58.225.150`
+27. Disconnect the server by `$ ~.` and then log back through port 2200: `$ ssh -i ~/.ssh/udacitykey.rsa -p 2200 grader@13.58.225.150`
 
 28. Disable ssh login for *root* user, as required by Udacity: `$ sudo nano /etc/ssh/sshd_config`. Find the *PermitRootLogin* line and edit to `no`. Restart ssh `$ sudo service ssh restart`
 
