@@ -61,3 +61,13 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 17.  Create a .ssh directory: `$ mkdir .ssh`
 
 18.  Create a file to store the public key: `$ touch .ssh/authorized_keys`
+
+19.  Edit the authorized_keys file `$ nano .ssh/authorized_keys`
+
+20. Change the permission: `$ sudo chmod 700 /home/grader/.ssh` and `$ sudo chmod 644 /home/grader/.ssh/authorized_keys`
+
+17. Change the owner from root to grader: `$ sudo chown -R grader:grader /home/grader/.ssh`
+
+18. Restart the ssh service: `$ sudo service ssh restart`
+
+19. Type `$ ~.` to disconnect from Amazon Lightsail server
