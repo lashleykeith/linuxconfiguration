@@ -16,6 +16,8 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 
 ![1](https://user-images.githubusercontent.com/21030885/38419742-7f5bdd56-39dc-11e8-993b-d11a07731f41.jpg)
 
+4.  Select the Linux/Unix platform and select the OS Only Ubuntu
+
 ![2m](https://user-images.githubusercontent.com/21030885/38419774-9d50cfce-39dc-11e8-8bc4-e473782db92b.jpg)
 
 ![3m](https://user-images.githubusercontent.com/21030885/38419792-b267820e-39dc-11e8-8356-b788fe99c1ff.jpg)
