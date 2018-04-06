@@ -1,6 +1,12 @@
 # linuxconfiguration
 A detailed linux configuration using Amazon Lightsail.
 
+## Project Details
+IP address: ```13.58.225.150/```(Will be deactived after review)
+
+URL: http://13.58.225.150/
+
+Web app is a modified version of [Flask Catalog](https://github.com/chillieguy/flask-catalog-app)
 ![1](https://user-images.githubusercontent.com/21030885/38419742-7f5bdd56-39dc-11e8-993b-d11a07731f41.jpg)
 
 ![2m](https://user-images.githubusercontent.com/21030885/38419774-9d50cfce-39dc-11e8-8bc4-e473782db92b.jpg)
