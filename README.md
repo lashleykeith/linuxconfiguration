@@ -40,4 +40,24 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
     - Move file to `.ssh` with `mv mightymax.pem ~/.ssh`
     - Change file permissions with `chmod 600 ~/.ssh/mightymax.pem`
     - Connect with SSH by entering `ssh -i ~/.ssh/mightymax.pem ubunutu@13.58.225.150`
+    
+10. Amazon Lightsail does not allow you to log in as a root user, but we can switch to become a root user. Type `$ sudo su -` and boom, we become a root user! Then type  `$ sudo adduser grader` to create another user 'grader'
 
+11.  Now create a new file under the sudoers directory: `$ sudo nano /etc/sudoers.d/grader`. Fill that file with `grader ALL=(ALL:ALL) ALL`, then save it (control X, then type `yes`, then hit the return key on your keyboard)
+
+12.  In order to prevent the `$ sudo: unable to resolve host` error, edit the hosts by `$ sudo nano /etc/hosts`, and then add `127.0.1.1 ip-172-26-7-180` under `127.0.1.1:localhost`
+
+13.  Run the following commands to update all packages and install finger package:
+- `$ sudo apt-get update`
+- `$ sudo apt-get upgrade`
+- `$ sudo apt-get install finger`
+
+14.   Open a new Terminal window (Command+N) and input `$ ssh-keygen -f ~/.ssh/udacitykey.rsa`
+
+15.  Stay on the same Terminal window, input `$ cat ~/.ssh/udacitykey.rsa.pub` to read the public key. Copy the public key.
+
+16.  Going back to the first terminal window where you are logged into Amazon Lightsail as the root user, move to grader's folder by `$ cd /home/grader`
+
+17.  Create a .ssh directory: `$ mkdir .ssh`
+
+18.  Create a file to store the public key: `$ touch .ssh/authorized_keys`
