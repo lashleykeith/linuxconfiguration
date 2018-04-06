@@ -5,8 +5,15 @@ A detailed linux configuration using Amazon Lightsail.
 IP address: ```13.58.225.150/```(Will be deactived after review)
 
 URL: http://13.58.225.150/
+Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith/MapApp)
 
-Web app is a modified version of [Flask Catalog](https://github.com/chillieguy/flask-catalog-app)
+## Amazon Lightsail Server Set Up
+1. Login to you Amazon Web Console. https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fus-east-2.console.aws.amazon.com%2Fconsole%2Fhome%3Fregion%3Dus-east-2%26state%3DhashArgs%2523%26isauthcode%3Dtrue&client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&forceMobileApp=0
+
+2.  Create a new AWS account and then go back to use the link above to log in
+
+3.  Click 'Create Instance'
+
 ![1](https://user-images.githubusercontent.com/21030885/38419742-7f5bdd56-39dc-11e8-993b-d11a07731f41.jpg)
 
 ![2m](https://user-images.githubusercontent.com/21030885/38419774-9d50cfce-39dc-11e8-8bc4-e473782db92b.jpg)
