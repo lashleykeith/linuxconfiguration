@@ -128,7 +128,20 @@ application.secret_key = 'supersecretkey'
 8. Now we need to install the Flask and other packages needed for this application
 - `$ sudo apt-get install python-pip`
 - `$ sudo pip install Flask`
-- `$ sudo pip install httplib2 oauth2client sqlalchemy psycopg2 sqlaclemy_utils requests render_template, redirect, psslib
+- `$ sudo pip install httplib2`
+- `$ sudo pip install sqlalchemy`
+- `$ sudo pip install oauth2client`
+- `$ sudo pip install sqlalchemy`
+- `$ sudo pip install  psycopg2`
+- `$ sudo pip install sqlalchemy_utils`
+- `$ sudo pip install requests`
+- `$ sudo pip install render_template`
+- `$ sudo pip install redirect`
+- `$ sudo pip install psslib`
+- `$ sudo pip install --upgrader pip`
+- `$ sudo pip install --upgrader --no-deps --force-reinstall utmp`
+
+
 
 9. Use the `nano __init__.py` command to change the `client_secrets.json` line to `/var/www/catalog/catalog/client_secrets.json` and change the host to your Amazon Lightsail public IP address and port to 80
 
@@ -138,8 +151,8 @@ application.secret_key = 'supersecretkey'
 
 ```
 <VirtualHost *:80>
-    ServerName [YOUR PUBLIC IP ADDRESS]
-    ServerAlias [YOUR AMAZON LIGHTSAIL HOST NAME]
+    ServerName 13.58.225.150
+    ServerAlias MightyMax
     ServerAdmin grader@13.58.225.150
     WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
     WSGIProcessGroup catalog
@@ -176,8 +189,11 @@ application.secret_key = 'supersecretkey'
 13. use `sudo nano` command to change all engine to `engine = create_engine('postgresql://catalog:[your password]@localhost/catalog`
 
 14. Initiate the database if you have a script to do so:
+`cd /var/ww/catalog/catalog/`
+`python database_setup.py`
 
 15. Restart Apache server `$ sudo service apache2 restart` and enter your public IP address or host name into the browser. Hooray! Your application should be online now!
 
-sudo 
+16. If it doesn't work go inside /var/www/catalog/catalog `sudo a2ensite catalog` and then try `sudo service apache2 restart`.
+ 
 
