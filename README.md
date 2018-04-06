@@ -201,6 +201,6 @@ application.secret_key = 'supersecretkey'
 
 ![errornow](https://user-images.githubusercontent.com/21030885/38428954-06ca1774-39f8-11e8-96de-9dd97c725614.jpg)
 
-I went into  `sudo nano /var/log/apache2/error.log`  and I attempted to download psycopg2 `sudo apt-get build-dep python-psycopg2`
+I went into  `sudo nano /var/log/apache2/error.log`  and I attempted to download psycopg2 `sudo apt-get build-dep python-psycopg2` it still gives the same error in the error log. 
 
 ![psycopg2](https://user-images.githubusercontent.com/21030885/38429672-050cb0e8-39fa-11e8-9d92-3f1be7531e97.jpg)
