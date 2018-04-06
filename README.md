@@ -196,4 +196,5 @@ application.secret_key = 'supersecretkey'
 
 16. If it doesn't work go inside /var/www/catalog/catalog `sudo a2ensite catalog` and then try `sudo service apache2 restart`.
  
+## 500 Internal Server Error 
 
