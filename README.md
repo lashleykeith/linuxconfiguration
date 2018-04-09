@@ -25,7 +25,7 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 
 6.  The instance needs a minute of two to start loading.  When it is reading you will see 'running' in the left corner of the status card.  Write down the public IP address on a paper for further use.
 
-![4m](https://user-images.githubusercontent.com/21030885/38419919-23427628-39dd-11e8-82c4-e6bf635ef801.jpg)
+![2a](https://user-images.githubusercontent.com/21030885/38500937-b803a712-3c46-11e8-940c-588139b01b28.jpg)
 
 7.  Click the status card and you come to this page.  Click the `Account page` link.
 ![5m](https://user-images.githubusercontent.com/21030885/38419928-27ce0928-39dd-11e8-875f-44bddb3d6b1b.jpg)
