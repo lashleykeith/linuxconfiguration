@@ -28,7 +28,7 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 ![2a](https://user-images.githubusercontent.com/21030885/38500937-b803a712-3c46-11e8-940c-588139b01b28.jpg)
 
 7.  Click the status card and you come to this page.  Click the `Account page` link.
-![5m](https://user-images.githubusercontent.com/21030885/38419928-27ce0928-39dd-11e8-875f-44bddb3d6b1b.jpg)
+![3a](https://user-images.githubusercontent.com/21030885/38500946-bde2d2f2-3c46-11e8-8854-8d85028758cf.jpg)
 
 8.  Click 'Download' to download your private key, it should go to your Download folder or your Document folder by default.  It is a .pem file
 ![6m](https://user-images.githubusercontent.com/21030885/38419959-3f5f581c-39dd-11e8-978d-e9cd738ba0c0.jpg)
