@@ -4,7 +4,7 @@ A detailed linux configuration using Amazon Lightsail.
 ## Project Details
 IP address: ```18.222.63.113/```(Will be deactived after review)
 
-URL: http://13.58.225.150/
+URL: http://18.222.63.113/
 Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith/MapApp)
 
 ## Amazon Lightsail Server Set Up
