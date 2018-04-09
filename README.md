@@ -34,8 +34,10 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 ![6m](https://user-images.githubusercontent.com/21030885/38419959-3f5f581c-39dd-11e8-978d-e9cd738ba0c0.jpg)
 
 **set up the aws instance**
+
 9. Click the 'Networking' tab and find the 'Add another' at the bottom. Add port 123 and 2200. Amazon Lightsail allows only port 22 and 80 by default, no matter how you set it up in ubuntu's ufw
-![7m](https://user-images.githubusercontent.com/21030885/38419975-45795784-39dd-11e8-947b-9241cc389ef6.jpg)
+
+![4a](https://user-images.githubusercontent.com/21030885/38500953-c0b9f348-3c46-11e8-956a-b76a90ed9e3e.jpg)
   - From terminal on local machine
     - Rename download file `<filename>.pem` with `sudo mv <filename>.pem morekey.pem`
     - Move file to `.ssh` with `sudo mv morekey.pem ~/.ssh`
