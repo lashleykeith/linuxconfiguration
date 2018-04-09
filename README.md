@@ -155,9 +155,9 @@ application.secret_key = 'supersecretkey'
 
 ```
 <VirtualHost *:80>
-    ServerName 13.58.225.150
-    ServerAlias MightyMax
-    ServerAdmin grader@13.58.225.150
+    ServerName 18.222.63.113
+    ServerAlias Continue
+    ServerAdmin grader@18.222.63.113
     WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
     WSGIProcessGroup catalog
     WSGIScriptAlias / /var/www/catalog/catalog.wsgi
