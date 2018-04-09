@@ -2,7 +2,7 @@
 A detailed linux configuration using Amazon Lightsail.
 
 ## Project Details
-IP address: ```13.58.225.150/```(Will be deactived after review)
+IP address: ```18.222.63.113/```(Will be deactived after review)
 
 URL: http://13.58.225.150/
 Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith/MapApp)
@@ -37,25 +37,25 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 9. Click the 'Networking' tab and find the 'Add another' at the bottom. Add port 123 and 2200. Amazon Lightsail allows only port 22 and 80 by default, no matter how you set it up in ubuntu's ufw
 ![7m](https://user-images.githubusercontent.com/21030885/38419975-45795784-39dd-11e8-947b-9241cc389ef6.jpg)
   - From terminal on local machine
-    - Rename download file `<filename>.pem` with `mv <filename>.pem mightymax.pem`
-    - Move file to `.ssh` with `mv mightymax.pem ~/.ssh`
-    - Change file permissions with `chmod 600 ~/.ssh/mightymax.pem`
-    - Connect with SSH by entering `ssh -i ~/.ssh/mightymax.pem ubunutu@13.58.225.150`
+    - Rename download file `<filename>.pem` with `sudo mv <filename>.pem morekey.pem`
+    - Move file to `.ssh` with `sudo mv morekey.pem ~/.ssh`
+    - Change file permissions with `sudo chmod 600 ~/.ssh/morekey.pem`
+    - Connect with SSH by entering `sudo ssh -i ~/.ssh/morekey.pem ubunutu@18.222.63.113`
     
 10. Amazon Lightsail does not allow you to log in as a root user, but we can switch to become a root user. Type `$ sudo su -` and boom, we become a root user! Then type  `$ sudo adduser grader` to create another user 'grader'
 
 11.  Now create a new file under the sudoers directory: `$ sudo nano /etc/sudoers.d/grader`. Fill that file with `grader ALL=(ALL:ALL) ALL`, then save it (control X, then type `yes`, then hit the return key on your keyboard)
 
-12.  In order to prevent the `$ sudo: unable to resolve host` error, edit the hosts by `$ sudo nano /etc/hosts`, and then add `127.0.1.1 ip-172-26-7-180` under `127.0.1.1:localhost`
+12.  In order to prevent the `$ sudo: unable to resolve host` error, edit the hosts by `$ sudo nano /etc/hosts`, and then add `127.0.0.1 ip-172-26-14-97` under `127.0.0.1:localhost`
 
 13.  Run the following commands to update all packages and install finger package:
 - `$ sudo apt-get update`
 - `$ sudo apt-get upgrade`
 - `$ sudo apt-get install finger`
 
-14.   Open a new Terminal window (Command+N) and input `$ ssh-keygen -f ~/.ssh/udacitykey.rsa`
+14.   Open a new Terminal window (Command+N) and input `$sudo ssh-keygen -f ~/.ssh/udacitykey.rsa`
 
-15.  Stay on the same Terminal window, input `$ cat ~/.ssh/udacitykey.rsa.pub` to read the public key. Copy the public key.
+15.  Stay on the same Terminal window, input `$ sudo cat ~/.ssh/udacitykey.rsa.pub` to read the public key. Copy the public key.
 
 16.  Going back to the first terminal window where you are logged into Amazon Lightsail as the root user, move to grader's folder by `$ cd /home/grader`
 
@@ -64,6 +64,8 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 18.  Create a file to store the public key: `$ touch .ssh/authorized_keys`
 
 19.  Edit the authorized_keys file `$ nano .ssh/authorized_keys`
+
+20.  Paste the public key you copied from the second terminal into the new authorized_keys file you made. 
 
 20. Change the permission: `$ sudo chmod 700 /home/grader/.ssh` and `$ sudo chmod 644 /home/grader/.ssh/authorized_keys`
 
