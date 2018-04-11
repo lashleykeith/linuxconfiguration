@@ -200,7 +200,7 @@ application.secret_key = 'supersecretkey'
 
 16. Then enter `sudo apt-get upgrade` to make appropiate upgrades
 
-17. Restart Apache server `$ sudo service apache2 restart` and enter your public IP address or host name into the browser. Hooray! Your application should be online now!
+17. Restart Apache server `$ sudo service apache2 restart` and enter your public IP address or host name into the browser.  Your application should be online now!
 
 18. If it doesn't work go inside /var/www/catalog/catalog `sudo a2ensite catalog` and then try `sudo service apache2 restart`.
  
