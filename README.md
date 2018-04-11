@@ -196,7 +196,11 @@ application.secret_key = 'supersecretkey'
 `cd /var/ww/catalog/catalog/`
 `python database_setup.py`
 
-15. Restart Apache server `$ sudo service apache2 restart` and enter your public IP address or host name into the browser. Hooray! Your application should be online now!
+15.  Make sure all the packages are updated first enter `sudo apt-get update` to check updates
 
-16. If it doesn't work go inside /var/www/catalog/catalog `sudo a2ensite catalog` and then try `sudo service apache2 restart`.
+16. Then enter `sudo apt-get upgrade` to make appropiate upgrades
+
+17. Restart Apache server `$ sudo service apache2 restart` and enter your public IP address or host name into the browser. Hooray! Your application should be online now!
+
+18. If it doesn't work go inside /var/www/catalog/catalog `sudo a2ensite catalog` and then try `sudo service apache2 restart`.
  
