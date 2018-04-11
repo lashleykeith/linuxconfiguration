@@ -2,9 +2,9 @@
 A detailed linux configuration using Amazon Lightsail.
 
 ## Project Details
-IP address: ```18.222.63.113/```(Will be deactived after review)
+IP address: ```18.219.107.247```(Will be deactived after review)
 
-URL: http://18.222.63.113/
+URL: http://18.219.107.247
 Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith/MapApp)
 
 ## Amazon Lightsail Server Set Up
@@ -39,16 +39,16 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 
 ![4a](https://user-images.githubusercontent.com/21030885/38500953-c0b9f348-3c46-11e8-956a-b76a90ed9e3e.jpg)
   - From terminal on local machine
-    - Rename download file `<filename>.pem` with `sudo mv <filename>.pem morekey.pem`
-    - Move file to `.ssh` with `sudo mv morekey.pem ~/.ssh`
-    - Change file permissions with `sudo chmod 600 ~/.ssh/morekey.pem`
-    - Connect with SSH by entering `sudo ssh -i ~/.ssh/morekey.pem ubunutu@18.222.63.113`
+    - Rename download file `<filename>.pem` with `sudo mv <filename>.pem continue2_key.pem`
+    - Move file to `.ssh` with `sudo mv continue2_key.pem ~/.ssh`
+    - Change file permissions with `sudo chmod 600 ~/.ssh/continue2_key.pem`
+    - Connect with SSH by entering `sudo ssh -i ~/.ssh/continue2_key.pem ubunutu@18.219.107.247`
     
 10. Amazon Lightsail does not allow you to log in as a root user, but we can switch to become a root user. Type `$ sudo su -` and boom, we become a root user! Then type  `$ sudo adduser grader` to create another user 'grader'
 
 11.  Now create a new file under the sudoers directory: `$ sudo nano /etc/sudoers.d/grader`. Fill that file with `grader ALL=(ALL:ALL) ALL`, then save it (control X, then type `yes`, then hit the return key on your keyboard)
 
-12.  In order to prevent the `$ sudo: unable to resolve host` error, edit the hosts by `$ sudo nano /etc/hosts`, and then add `127.0.0.1 ip-172-26-14-97` under `127.0.0.1:localhost`
+12.  In order to prevent the `$ sudo: unable to resolve host` error, edit the hosts by `$ sudo nano /etc/hosts`, and then add `127.0.0.1 ip-172-26-3-75` under `127.0.0.1:localhost`
 
 13.  Run the following commands to update all packages and install finger package:
 - `$ sudo apt-get update`
@@ -155,9 +155,9 @@ application.secret_key = 'supersecretkey'
 
 ```
 <VirtualHost *:80>
-    ServerName 18.222.63.113
-    ServerAlias Continue
-    ServerAdmin grader@18.222.63.113
+    ServerName 18.219.107.247
+    ServerAlias Continue2
+    ServerAdmin grader@18.219.107.247
     WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
     WSGIProcessGroup catalog
     WSGIScriptAlias / /var/www/catalog/catalog.wsgi
