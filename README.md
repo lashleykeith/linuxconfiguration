@@ -93,6 +93,15 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 - `$ sudo ufw allow 123/udp`
 - `$ sudo ufw enable`
 
+30.  Install fail2ban in order to mitigate brute force attacks by users and bots alike.
+- `$ sudo apt-get update`.
+- `$ sudo apt-get install fail2ban`.
+- We need the sendmail package to send the alerts to the admin user:`$ sudo apt-get install sendmail`.
+- Create a file to safely customize the fail2ban functionality: `$ sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local`.
+- Open the jail.local and edit it:`$ sudo nano /etc/fail2ban/jail.local`. Set the destemail field to admin user's email address.
+
+
+
 **Now we are going to deploy the catalog application**
 
 1. Install required packages
