@@ -104,9 +104,27 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 -  Install unattended-upgrades if not already installed:  `$ sudo apt-get install unattended-upgrades`.
 -  To enable it, do: `$ sudo dpkg-reconfigure --priority=low unattended-upgrade`
 
+33.  Another way to make automatic updates
+-  `sudo apt install unattended-upgrades`
+- To configure unattended-upgrades, `sudo nano /etc/apt/apt.conf.d/50unattended-upgrades` and adjust the following to fit your needs: 
+- ` 
+  Unattended-Upgrade::Allowed-Origins {
+        "${distro_id}:${distro_codename}";
+        "${distro_id}:${distro_codename}-security";
+//      "${distro_id}:${distro_codename}-updates";
+//      "${distro_id}:${distro_codename}-proposed";
+//      "${distro_id}:${distro_codename}-backports";
+};
 
+`
+ -  To enable automatic updates, sudo nano `/etc/apt/apt.conf.d/20auto-upgrades` and set the appropriate apt configuration options: 
+`
+  APT::Periodic::Update-Package-Lists "1";
+  APT::Periodic::Download-Upgradeable-Packages "1";
+  APT::Periodic::AutocleanInterval "7";
+  APT::Periodic::Unattended-Upgrade "1";
 
-
+`
 **Now we are going to deploy the catalog application**
 
 1. Install required packages
