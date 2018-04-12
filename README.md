@@ -69,38 +69,38 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 
 20.  Paste the public key you copied from the second terminal into the new `authorized_keys` file you made in the first terminal. 
 
-20. Change the permission: `$ sudo chmod 700 /home/grader/.ssh` and `$ sudo chmod 644 /home/grader/.ssh/authorized_keys`
+21. Change the permission: `$ sudo chmod 700 /home/grader/.ssh` and `$ sudo chmod 644 /home/grader/.ssh/authorized_keys`
 
-21. Change the owner from root to grader: `$ sudo chown -R grader:grader /home/grader/.ssh`
+22. Change the owner from root to grader: `$ sudo chown -R grader:grader /home/grader/.ssh`
 
-22. Restart the ssh service: `$ sudo service ssh restart`
+23. Restart the ssh service: `$ sudo service ssh restart`
 
-23. Type `logout` to disconnect from Amazon Lightsail server
+24. Type `logout` to disconnect from Amazon Lightsail server
 
-24. Log into the server as grader: `$ ssh -i ~/.ssh/udacitykey.rsa grader@13.58.225.150`
+25. Log into the server as grader: `$ ssh -i ~/.ssh/udacitykey.rsa grader@13.58.225.150`
 
-25. We now need to enforce the key-based authentication: `$ sudo nano /etc/ssh/sshd_config`. Find the *PasswordAuthentication* line and change text after to `no`. After this, restart ssh again: `$ sudo service ssh restart`
+26. We now need to enforce the key-based authentication: `$ sudo nano /etc/ssh/sshd_config`. Find the *PasswordAuthentication* line and change text after to `no`. After this, restart ssh again: `$ sudo service ssh restart`
 
-26. We now need to change the ssh port from 22 to 2200, as required by Udacity: `$ sudo nano /etc/ssh/ssdh_config` Find the *Port* line and change `22` to `2200`. Restart ssh: `$ sudo service ssh restart`
+27. We now need to change the ssh port from 22 to 2200, as required by Udacity: `$ sudo nano /etc/ssh/ssdh_config` Find the *Port* line and change `22` to `2200`. Restart ssh: `$ sudo service ssh restart`
 
-27. Disconnect the server by `$ ~.` and then log back through port 2200: `$ ssh -i ~/.ssh/udacitykey.rsa -p 2200 grader@13.58.225.150`
+28. Disconnect the server by `$ ~.` and then log back through port 2200: `$ ssh -i ~/.ssh/udacitykey.rsa -p 2200 grader@13.58.225.150`
 
-28. Disable ssh login for *root* user, as required by Udacity: `$ sudo nano /etc/ssh/sshd_config`. Find the *PermitRootLogin* line and edit to `no`. Restart ssh `$ sudo service ssh restart`
+29. Disable ssh login for *root* user, as required by Udacity: `$ sudo nano /etc/ssh/sshd_config`. Find the *PermitRootLogin* line and edit to `no`. Restart ssh `$ sudo service ssh restart`
 
-29. Now we need to configure UFW to fulfill the requirement:
+30. Now we need to configure UFW to fulfill the requirement:
 - `$ sudo ufw allow 2200/tcp`
 - `$ sudo ufw allow 80/tcp`
 - `$ sudo ufw allow 123/udp`
 - `$ sudo ufw enable`
 
-30.  Install fail2ban in order to mitigate brute force attacks by users and bots alike.
+31.  Install fail2ban in order to mitigate brute force attacks by users and bots alike.
 - `$ sudo apt-get update`.
 - `$ sudo apt-get install fail2ban`.
 - We need the sendmail package to send the alerts to the admin user:`$ sudo apt-get install sendmail`.
 - Create a file to safely customize the fail2ban functionality: `$ sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local`.
 - Open the jail.local and edit it:`$ sudo nano /etc/fail2ban/jail.local`. Set the destemail field to admin user's email address.
 
-31.   Configure cron scripts to automatically manage package updates
+32.   Configure cron scripts to automatically manage package updates
 -  Install unattended-upgrades if not already installed:  `$ sudo apt-get install unattended-upgrades`.
 -  To enable it, do: `$ sudo dpkg-reconfigure --priority=low unattended-upgrade`
 
