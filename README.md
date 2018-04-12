@@ -100,6 +100,11 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 - Create a file to safely customize the fail2ban functionality: `$ sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local`.
 - Open the jail.local and edit it:`$ sudo nano /etc/fail2ban/jail.local`. Set the destemail field to admin user's email address.
 
+31.   Configure cron scripts to automatically manage package updates
+-  Install unattended-upgrades if not already installed:  `$ sudo apt-get install unattended-upgrades`.
+-  To enable it, do: `$ sudo dpkg-reconfigure --priority=low unattended-upgrade`
+
+
 
 
 **Now we are going to deploy the catalog application**
