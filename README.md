@@ -127,6 +127,11 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
   APT::Periodic::Unattended-Upgrade "1";
 
 `
+
+- `sudo apt-get update `
+- `sudo apt-get dist-upgrade`
+- `sudo reboot`
+
 **Now we are going to deploy the catalog application**
 
 1. Install required packages
