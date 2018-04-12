@@ -55,9 +55,9 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 - `$ sudo apt-get upgrade`
 - `$ sudo apt-get install finger`
 
-14.   Open a new Terminal window (Command+N) and input `$sudo ssh-keygen -f ~/.ssh/udacitykey.rsa`
+14.   Open a new Terminal window (Command+N) and input `$sudo ssh-keygen -f ~/.ssh/continue2_key.rsa`
 
-15.  Stay on the same Terminal window, input `$ sudo cat ~/.ssh/udacitykey.rsa.pub` to read the public key. Copy the public key.
+15.  Stay on the same Terminal window, input `$ sudo cat ~/.ssh/continue2_key.rsa.pub` to read the public key. Copy the public key.
 
 16.  Going back to the first terminal window where you are logged into Amazon Lightsail as the root user, move to grader's folder by `$ cd /home/grader`
 
@@ -77,13 +77,13 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 
 24. Type `logout` to disconnect from Amazon Lightsail server
 
-25. Log into the server as grader: `$ ssh -i ~/.ssh/udacitykey.rsa grader@13.58.225.150`
+25. Log into the server as grader: `$ ssh -i ~/.ssh/continue2_key.rsa grader@18.219.107.247`
 
 26. We now need to enforce the key-based authentication: `$ sudo nano /etc/ssh/sshd_config`. Find the *PasswordAuthentication* line and change text after to `no`. After this, restart ssh again: `$ sudo service ssh restart`
 
 27. We now need to change the ssh port from 22 to 2200, as required by Udacity: `$ sudo nano /etc/ssh/ssdh_config` Find the *Port* line and change `22` to `2200`. Restart ssh: `$ sudo service ssh restart`
 
-28. Disconnect the server by `$ ~.` and then log back through port 2200: `$ ssh -i ~/.ssh/udacitykey.rsa -p 2200 grader@13.58.225.150`
+28. Disconnect the server by `$ ~.` and then log back through port 2200: `$ ssh -i ~/.ssh/continue2_key.rsa -p 2200 grader@18.219.107.247`
 
 29. Disable ssh login for *root* user, as required by Udacity: `$ sudo nano /etc/ssh/sshd_config`. Find the *PermitRootLogin* line and edit to `no`. Restart ssh `$ sudo service ssh restart`
 
