@@ -93,6 +93,8 @@ Web app is a modified version of [Flask Catalog](https://github.com/lashleykeith
 - `$ sudo ufw allow 123/udp`
 - `$ sudo ufw enable`
 
+**Install Automatic Updates**
+
 31.  Install fail2ban in order to mitigate brute force attacks by users and bots alike.
 - `$ sudo apt-get update`.
 - `$ sudo apt-get install fail2ban`.
