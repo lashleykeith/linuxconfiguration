@@ -2,6 +2,7 @@
 A detailed linux configuration using Amazon Lightsail.
 
 ## Project Details
+Udacity Linux configuration project with Amazon Lightsail
 IP address: ```18.219.107.247```(Will be deactived after review)
 
 URL: http://18.219.107.247
