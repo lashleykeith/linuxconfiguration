@@ -175,6 +175,7 @@ application.secret_key = 'supersecretkey'
 - `$ sudo pip install httplib2`
 - `$ sudo pip install sqlalchemy`
 - `$ sudo pip install oauth2client`
+- `$ sudo pip install --upgrade oauth2client`
 - `$ sudo pip install sqlalchemy`
 - `$ sudo pip install  psycopg2`
 - `$ sudo pip install sqlalchemy_utils`
